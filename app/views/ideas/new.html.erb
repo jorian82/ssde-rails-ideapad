@@ -1,0 +1,9 @@
+<div class="container">
+	<h1>New Idea</h1>
+	
+	<%= render 'form', idea: @idea %>
+	
+	<%= link_to ideas_path, class: "btn btn-danger" do %>
+		<i class="material-icons">block</i>
+	<% end %>
+</div>

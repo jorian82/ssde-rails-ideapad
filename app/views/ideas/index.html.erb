@@ -1,0 +1,43 @@
+<div class="container">
+
+	<h1>Ideas</h1>
+	
+	<table class="table table-striped">
+	  <thead>
+	    <tr class="bg-primary">
+	      <th style="width: 30%">Name</th>
+	      <th style="width: 50%">Description</th>
+	      <th style="width: 20%">Actions</th>
+	    </tr>
+	  </thead>
+	
+	  <tbody>
+	    <% @ideas.each do |idea| %>
+	      <tr>
+	        <td><%= idea.name %></td>
+	        <td><%= idea.description %><!--%= image_tag(idea.picture_url, height: 30) if idea.picture? %--></td>
+	        <td>
+	        	<div class="btn-group" role="group" aria-label="actions">
+		        	<%= link_to idea, class: "btn btn-success" do %>
+		        		<i class="material-icons">visibility</i>
+		        	<% end %>
+		        	<%= link_to edit_idea_path(idea), class: "btn btn-info"  do %>
+		        		<i class="material-icons">edit</i>
+		        	<% end %>
+		        	<%= link_to idea, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" do %>
+		        		<i class="material-icons">delete</i>
+		        	<% end %>
+	        	</div>
+	        </td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+	
+	<br>
+	
+	<%= link_to new_idea_path, class: "btn btn-primary"  do %>
+		<i class="glyphicon glyphicon-plus"></i>&nbsp;New Idea
+	<% end %>
+
+</div>

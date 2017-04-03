@@ -1,0 +1,14 @@
+<div class="container">
+	<h1><%= @idea.name %></h1>
+	
+	<%= render 'form', idea: @idea %>
+	
+	<div  class="btn-group" role="group" aria-label="actions">
+		<%= link_to ideas_path, class: "btn btn-danger" do %>
+			<i class="material-icons">arrow_back</i>
+		<% end %>
+		<%= link_to @idea, class: "btn btn-success" do %>
+			<i class="material-icons">visibility</i>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<h1><%= @idea.name %></h1>
+	</div>
+	<div class="row">
+		<h3><%= @idea.description %></h3>
+	</div>
+	<div class="row">
+		<%= image_tag(@idea.picture_url, width: 900) if @idea.picture.present? %>
+	</div>
+	<br>
+	<hr />
+	<div class="btn-group" role="group" aria-label="actions">
+		<%= link_to ideas_path, class: "btn btn-danger" do %>
+			<i class="material-icons">arrow_back</i>
+		<% end %>
+		<%= link_to edit_idea_path(@idea), class: "btn btn-success" do %>
+			<i class="material-icons">edit</i>
+		<% end %>
+	</div>
+</div>
