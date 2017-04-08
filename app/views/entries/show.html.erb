@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<h1><%= @entry.title %></h1>
+		</div>
+		<div class="col-md-4"><h3><%= @entry.date %></h3></div>
+	</div>
+	<div class="row">
+		<h3><%= @entry.contents %></h3>
+	</div>
+	<br>
+	<hr />
+	<div class="btn-group" role="group" aria-label="actions">
+		<%= link_to entries_path, class: "btn btn-danger" do %>
+			<i class="material-icons">arrow_back</i>
+		<% end %>
+		<%= link_to edit_entry_path(@entry), class: "btn btn-success" do %>
+			<i class="material-icons">edit</i>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+	<h1>New Entry</h1>
+	
+	<%= render 'form', entry: @entry %>
+	
+	<%= link_to entries_path, class: "btn btn-danger" do %>
+		<i class="material-icons">block</i>
+	<% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+	<h1><%= @entry.title %></h1>
+	
+	<%= render 'form', entry: @entry %>
+	
+	<div  class="btn-group" role="group" aria-label="actions">
+		<%= link_to entries_path, class: "btn btn-danger" do %>
+			<i class="material-icons">arrow_back</i>
+		<% end %>
+		<%= link_to @entry, class: "btn btn-success" do %>
+			<i class="material-icons">visibility</i>
+		<% end %>
+	</div>
+</div>
